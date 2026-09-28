@@ -1,0 +1,32 @@
+# Data and artefacts: never commit audio, features, checkpoints or scores
+data/
+outputs/
+wandb/
+mlruns/
+*.flac
+*.wav
+*.mp3
+*.opus
+*.tar
+*.tar.gz
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

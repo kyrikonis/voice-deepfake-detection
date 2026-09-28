@@ -1,0 +1,23 @@
+data_root: /mnt/d/DeepLearning/data/raw
+outputs_root: /mnt/d/DeepLearning/voice-deepfake-detection/outputs
+
+asvspoof2019_la:
+  train_flac: asvspoof2019/LA/ASVspoof2019_LA_train/flac
+  dev_flac: asvspoof2019/LA/ASVspoof2019_LA_dev/flac
+  eval_flac: asvspoof2019/LA/ASVspoof2019_LA_eval/flac
+  train_protocol: asvspoof2019/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.train.trn.txt
+  dev_protocol: asvspoof2019/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.dev.trl.txt
+  eval_protocol: asvspoof2019/LA/ASVspoof2019_LA_cm_protocols/ASVspoof2019.LA.cm.eval.trl.txt
+  asv_scores_dev: asvspoof2019/LA/ASVspoof2019_LA_asv_scores/ASVspoof2019.LA.asv.dev.gi.trl.scores.txt
+  asv_scores_eval: asvspoof2019/LA/ASVspoof2019_LA_asv_scores/ASVspoof2019.LA.asv.eval.gi.trl.scores.txt
+
+asvspoof5:
+  dev_flac: asvspoof5/flac_D
+  eval_flac: asvspoof5/flac_E_eval
+  dev_protocol: asvspoof5/protocols/ASVspoof5.dev.track_1.tsv
+  eval_protocol: asvspoof5/protocols/ASVspoof5.eval.track_1.tsv
+  train_protocol: asvspoof5/protocols/ASVspoof5.train.tsv
+
+itw:
+  audio: itw/release_in_the_wild
+  meta: itw/release_in_the_wild/meta.csv

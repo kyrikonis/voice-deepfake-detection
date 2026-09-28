@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vdd"
+version = "0.1.0"
+description = "Voice deepfake detection: generalisation of spectrogram CNNs to fine-tuned speech transformers"
+requires-python = ">=3.11"
+# torch is installed separately from the CUDA index (https://download.pytorch.org/whl/cu126).
+# torchaudio is deliberately NOT a dependency (see docs/decisions.md).
+dependencies = [
+    "torch>=2.14",
+    "numpy",
+    "scipy",
+    "pandas",
+    "scikit-learn",
+    "soundfile",
+    "librosa",
+    "matplotlib",
+    "pyyaml",
+    "tqdm",
+    "transformers",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter"]
+demo = ["gradio"]
+# tracking = ["wandb"] or ["mlflow"]: decided in Phase 2
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
